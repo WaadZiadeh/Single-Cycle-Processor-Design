@@ -1,0 +1,45 @@
+ 
+first control signal
+RegDst (1bit)
+0> Rx
+1>R7
+second control signal
+RegWrite (1bit) 
+0> no write on reg
+1> write on reg
+
+ExtOp (1bit)
+0> zero ext. Imm5
+1> sign ext. Imm5
+
+B_Selction (2bit)
+
+00> BusZ
+01>Imm5
+10>Imm2Imm3
+11>Imm11
+
+memWrite(1 bit )
+0> no write 
+1> write on memory 
+
+memRead(1 bit )
+0> no Read 
+1> write on Read 
+
+
+Wbdata(2bit)
+00> ALU result
+01>Data memory
+10> PC+2
+11>Ry+Imm2+Imm3
+
+pcOpcode (2bit)
+00>PC+2
+01>PC+ex_Imm5
+10>PC+ex_Imm11
+11>un used
+
+opcode (1bit)
+0>ALU result
+1> Ry+Imm2+Imm3
